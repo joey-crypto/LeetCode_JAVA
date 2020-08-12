@@ -1,0 +1,12 @@
+public int largesetSumAfterNegations(int[] arr, int k){
+Arrays.sort(arr)
+int sum = 0, len = arr.length, minIndex = 0;
+while(k>0){
+arr[minIndex] = -arr[minIndex];
+k--;
+if(minIndex+1<len&&arr[minIndex]>arr[minIndex+1])
+minIndex++;
+}
+for(int i :srr)sum+=i;
+return sum;
+}
