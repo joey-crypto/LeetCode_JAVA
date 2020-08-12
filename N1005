@@ -4,6 +4,8 @@ int sum = 0, len = arr.length, minIndex = 0;
 while(k>0){
 arr[minIndex] = -arr[minIndex];
 k--;
+ // 维护最小值索引
+ // 若后面还有数，则看当前的与下一个谁更小
 if(minIndex+1<len&&arr[minIndex]>arr[minIndex+1])
 minIndex++;
 }
