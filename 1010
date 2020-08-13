@@ -1,0 +1,15 @@
+class Solution{
+public int numPairsDivisibleBy60(int [] time){
+int[] bucket = new int[60];
+for(int t : time){
+bucket[t%60]++;
+}
+int cnt = 0;
+for(int i = 0;i<60;i++){
+if (bucket[i]==0) continue;
+if(i == 0||i==30)cnt+=bucket[i]*(bucket[i]-1);
+else cnt+=bucket[i]*bucket[60-i];
+}
+return cnt/2;
+}
+}
