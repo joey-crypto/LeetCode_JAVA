@@ -1,0 +1,31 @@
+package LeetCode;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class P1018 {
+	public static List<Boolean> prefixesDivBy5(int[] A) {
+        List<Boolean> list = new ArrayList<Boolean>();
+        int sum = 0;
+        for(int i = 0;i<A.length;i++) {
+            sum+=A[i];
+            sum = sum>9?sum-10:sum;
+            if(sum==0||sum==5) {
+                list.add(true);
+            }else list.add(false);
+            sum = sum*2;
+        }
+        return list;
+    }
+	public static void main(String args[]) { 
+ 	   int [] A = {0,1,1,1,1,1};
+ 	   
+     for (Boolean s : prefixesDivBy5(A)) {
+         System.out.println(s);
+}
+     
+     
+ } 
+	
+
+}
