@@ -1,0 +1,13 @@
+package LeetCode;
+
+public class P1037 {
+	public boolean isBoomerage(int [][] points)
+	{
+		int x = points[1][1] - points[0][1] * (points[2][0] - points[0][0]);
+	    int y =  (points[2][1] - points[0][1]) * (points[1][0] - points[0][0]);
+	    return x!=y;
+		
+	}
+	
+
+}
